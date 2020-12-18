@@ -3,50 +3,235 @@
 <meta name="Description" content="Explore new and exciting STEAM Careers.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <html lang="en"><head>
-<style>@font-face{font-family:'Baloo 2';font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/baloo2/v1/wXKuE3kTposypRyd7-P5FewKmE8y.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Baloo 2';font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/baloo2/v1/wXKuE3kTposypRyd7-P5Fe0KmE8y.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Baloo 2';font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/baloo2/v1/wXKuE3kTposypRyd7-P5FeMKmA.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}a:link{color:#fff;background-color:transparent;text-decoration:none}a:visited{color:#fff;background-color:transparent;text-decoration:none}a:hover{color:#fff;background-color:transparent;text-decoration:underline}a:active{color:#fff;background-color:transparent;text-decoration:underline}*{margin:0;padding:0}body{font-family:'Baloo 2',cursive}.banner-text{width:100%;position:absolute;z-index:1}.banner-text ul{height:50px;float:right}.banner-text ul li{display:inline-block;padding:40px 15px;text-transform:uppercase;color:#fff;font-size:20px}.banner-text ul li:hover{cursor:pointer}.banner-text h2{text-align:center;color:#fff;font-size:100px;margin-top:20%}.animation-area{background:linear-gradient(to left,#171b60,#c03b2a);width:100%;height:100vh}.box-area{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden}.box-area li{position:absolute;display:block;list-style:none;width:25px;height:25px;background:rgba(255,255,255,.2);animation:animate 20s linear infinite;bottom:-150px}.box-area li:nth-child(1){left:86%;width:80px;height:80px;animation-delay:0s}.box-area li:nth-child(2){left:12%;width:30px;height:30px;animation-delay:1.5s;animation-duration:10s}.box-area li:nth-child(3){left:70%;width:100px;height:100px;animation-delay:5.5s}.box-area li:nth-child(4){left:42%;width:150px;height:150px;animation-delay:0s;animation-duration:15s}.box-area li:nth-child(5){left:65%;width:40px;height:40px;animation-delay:0s}.box-area li:nth-child(6){left:15%;width:110px;height:110px;animation-delay:3.5s}@keyframes animate{0%{transform:translateY(0) rotate(0);opacity:1}100%{transform:translateY(-800px) rotate(360deg);opacity:0}}.custom-shape-divider-top-1607747801{position:absolute;top:0;left:0;width:100%;overflow:hidden;line-height:0}.custom-shape-divider-top-1607747801 svg{position:relative;display:block;width:calc(121% + 1.3px);height:132px}.custom-shape-divider-top-1607747801 .shape-fill{fill:#171b60}.custom-shape-divider-bottom-1607752178{position:absolute;bottom:0;left:0;width:100%;overflow:hidden;line-height:0;transform:rotate(180deg)}.custom-shape-divider-bottom-1607752178 svg{position:relative;display:block;width:calc(153% + 1.3px);height:58px}.custom-shape-divider-bottom-1607752178 .shape-fill{fill:#171b60}
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Baloo 2', cursive;
+}
+.banner-text {
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+}
+.banner-text .ul {
+	height: 50px;
+	float: right;
+        margin-right: 2vmin;
+        text-align:center;
+}
+.banner-text .ul .li {
+	display: inline-block;
+	padding: 5vmin 1vmin;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 20px; /*or 2.5vmin*/
+}
+.banner-text .ul .li:hover {
+	cursor: pointer;
+}
+.banner-text h2 {
+	text-align: center;
+	color: #fff;
+	font-size: 12vmin;
+	margin-top: 35vmin;
+}
+.animation-area {
+	background: linear-gradient(to left, #171b60, #c03b2a);
+	width: 100%;
+	height: 100vh;
+}
+.box-area {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.box-area img{
+	position: absolute;
+	display: block;
+	list-style: none;
+	width: 5vmin;
+	height: 5vmin;
+	animation: animate 20s linear infinite;
+	bottom: -25vmin;
+}
+.box-area img:nth-child(1) {
+	left: 86%;
+	width: 12vmin;
+	height: 12vmin;
+	animation-delay: 0s;
+}
+.box-area img:nth-child(2) {
+	left: 12%;
+	width: 6vmin;
+	height: auto;
+	animation-delay: 1.5s;
+	animation-duration: 10s;
+}
+.box-area img:nth-child(3) {
+	left: 70%;
+	width: 15vmin;
+	height: 15vmin;
+	animation-delay: 5.5s;
+}
+.box-area img:nth-child(4) {
+	left: 42%;
+	width: 20vmin;
+	height: 20vmin;
+	animation-delay: 0s;
+	animation-duration: 15s;
+}
+.box-area img:nth-child(5) {
+	left: 65%;
+	width: 8vmin;
+	height: auto;
+	animation-delay: 0s;
+}
+.box-area img:nth-child(6) {
+	left: 15%;
+	width: 13vmin;
+	height: 13vmin;
+	animation-delay: 3.5s;
+}
+
+@keyframes animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-800px) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+.custom-shape-divider-top-1607747801 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    display:none;
+}
+
+.custom-shape-divider-top-1607747801 svg {
+    position: relative;
+    display: block;
+    width: calc(121% + 1.3px);
+    height: 132px;
+    display:none;
+}
+
+.custom-shape-divider-top-1607747801 .shape-fill {
+    fill: #171B60;
+    display:none;
+}
+
+.custom-shape-divider-bottom-1607752178 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    display:none;
+}
+
+.custom-shape-divider-bottom-1607752178 svg {
+    position: relative;
+    display: block;
+    width: calc(153% + 1.3px);
+    height: 58px;
+    display:none;
+}
+
+.custom-shape-divider-bottom-1607752178 .shape-fill {
+    fill: #171B60;
+    display:none;
+}
+@media screen and (max-width:790px) {
+  .banner-text .ul {
+	height: auto;
+	float: left;
+        text-align:center;
+        display:grid;
+	grid-template-columns: 33% 33% 33%;
+	justify-content: space-evenly;
+        width: 100%;
+  }
+  .banner-text .ul .li {
+	display: inline-block;
+	padding: 2.5vmin 1vmin;
+	padding-bottom:0px;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 20px;
+  }
+}
+</style>
 	<meta charset="UTF-8"></style>
 	<title>STEAM Careers</title>
 	
 	
 <script data-dapp-detection="">!function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();</script><link rel="prefetch"></head>
 <body>
-	<div class="banner-text">
-		<ul>
-			<h4><a href="/index.html">Home</a></h4>
-			<h4><a href="/index.html">Science</a></h4>
-			<h4>Technology</h4>
-			<h4>Engineering</h4>
-			<h4>Arts</h4>
-			<h4>Math</h4>
-		</ul>
-		<h2>STEAM Careers</h2>
-	</div>
-	<div class="animation-area">
-		<ul class="box-area">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
-	</div>
-<div class="custom-shape-divider-top-1607747801">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
-        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
-        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
-    </svg>
+<div class="banner-text">
+<div class="ul">
+<div class="li">Home</div>
+<div class="li">Science</div>
+<div class="li">Technology</div>
+<div class="li">Engineering</div>
+<div class="li">Arts</div>
+<div class="li">Math</div>
 </div>
-
-<div class="custom-shape-divider-bottom-1607748131">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
-        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
-        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
-    </svg>
+<h2>STEAM Careers</h2>
 </div>
-<p></p>
+<!--Note- the images used are from the BurnOut Short Story library-->
+<div class="animation-area">
+<div class="box-area">
+<!-- Image MLA Citation: 
+UnboxScience. “Science Beaker” Pixabay, 28 August 2015, 
+https://pixabay.com/illustrations/flask-beaker-science-laboratory-908887/. Accessed 16 December 2020.
+-->
+<img src="https://roboticsdev1584.github.io/burn-out-short-story/Other_Images/science.png"></img>
 
+<!-- Image MLA Citation: 
+IO-Images. “Mobile Phone” Pixabay, 11 January 2016, 
+https://pixabay.com/vectors/smartphone-mobile-phone-phone-1132675/. Accessed 16 December 2020.
+-->
+<img></img>
 
+<!-- Image MLA Citation: 
+Samuel1983. “Gear” Pixabay, 6 January 2016, 
+https://pixabay.com/vectors/gear-mechanics-settings-icon-1119298/. Accessed 16 December 2020.
+-->
+<img src="https://roboticsdev1584.github.io/burn-out-short-story/Other_Images/engineering.png"></img>
+
+<!-- Image MLA Citation: 
+OpenClipart-Vectors. “Paint Brush” Pixabay, 31 March 2016, 
+https://pixabay.com/vectors/artist-colorful-paint-brush-palette-1297400/. Accessed 16 December 2020.
+-->
+<img src="https://roboticsdev1584.github.io/burn-out-short-story/Other_Images/art.png"></img>
+
+<!-- Image MLA Citation: 
+Cheskapoondesignstudio. “Calculator” Pixabay, 7 June 2017, 
+https://pixabay.com/illustrations/calculator-numbers-0-1-2-3-4-5-2374442/. Accessed 16 December 2020.
+-->
+<img src="https://roboticsdev1584.github.io/burn-out-short-story/Other_Images/math.png"></img>
+
+<!-- Image MLA Citation: 
+Protic, Shafin. “Electrical Circuit” Pixabay, 3 May 2020, 
+https://pixabay.com/illustrations/circuit-ic-chip-technology-5115478/. Accessed 16 December 2020.
+-->
+<img src="https://roboticsdev1584.github.io/burn-out-short-story/Other_Images/technology2.png"></img>
+</div>
+</div>
+	
 </body></html>
