@@ -4,7 +4,10 @@
   <title>STEAM Careers</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="https://roboticsdev1584.github.io/STEAM-Tour/favicon.ico" type="image/x-icon">
+
   <style>
     /*This is for the button styling*/
     body {
@@ -36,7 +39,7 @@
     .w3-bar,h1,button {
     	font-family: "Montserrat", sans-serif
     }
-  html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+  html{box-sizing:border-box; scroll-behavior:smooth;}*,*:before,*:after{box-sizing:inherit;}
   /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
   html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
   article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}summary{display:list-item}
@@ -63,7 +66,7 @@
   /* End extract */
   html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
   h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}
-  h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}
+  h1,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}
   a{color:inherit}
   .w3-btn,.w3-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
   .w3-btn:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
@@ -91,7 +94,7 @@
   @media (max-width:768px){.w3-modal-content{width:500px}.w3-modal{padding-top:50px}}
   @media (min-width:993px){.w3-modal-content{width:900px}.w3-hide-large{display:none!important}}
   @media (max-width:992px) and (min-width:601px){.w3-hide-medium{display:none!important}}
-  .w3-top{position:fixed;width:100%;z-index:1; top:0; background-color: #171B60;
+  .w3-top{position:fixed;width:100%;z-index:99; top:0; background-color: #171B60;
   color: #ffffff;}
   .w3-row-padding,.w3-row-padding>.w3-half,.w3-row-padding>.w3-third,.w3-row-padding>.w3-twothird,.w3-row-padding>.w3-threequarter,.w3-row-padding>.w3-quarter,.w3-row-padding>.w3-col{padding:0 8px}  
   .w3-container{padding:0.01em 16px}
@@ -110,7 +113,7 @@
   .w3-red,.w3-hover-red:hover{color:#fff!important;background-color:#f44336!important}
   .w3-white,.w3-hover-white:hover{color:#000!important;background-color:#fff!important}
   .w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
-
+    
   /* latin-ext */
   @font-face {
       font-family: 'Lato';
@@ -167,6 +170,177 @@
       src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
       unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
+/*Note that the code below is used for the landing screen animation
+/** {
+	margin: 0;
+	padding: 0;
+}*/
+.banner-text {
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+}
+.banner-text .ul {
+	height: 50px;
+	float: right;
+        margin-right: 2vmin;
+        text-align:center;
+}
+.banner-text .ul .li {
+	display: inline-block;
+	padding: 5vmin 1vmin;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 20px; /*or 2.5vmin*/
+}
+.banner-text .ul .li:hover {
+	cursor: pointer;
+}
+.banner-text h2 {
+	text-align: center;
+	color: #fff;
+	font-size: 12vmin;
+	margin-top: 35vmin;
+  font-family: 'Baloo 2', cursive;
+}
+.animation-area {
+	background: linear-gradient(to left, #171b60, #c03b2a);
+	width: 100%;
+	height: 100vh;
+}
+.box-area {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.box-area img{
+	position: absolute;
+	display: block;
+	list-style: none;
+	width: 5vmin;
+	height: 5vmin;
+	animation: animate 20s linear infinite;
+	bottom: -25vmin;
+}
+.box-area img:nth-child(1) {
+	left: 86%;
+	width: 12vmin;
+	height: 12vmin;
+	animation-delay: 0s;
+}
+.box-area img:nth-child(2) {
+	left: 12%;
+	width: 6vmin;
+	height: auto;
+	animation-delay: 1.5s;
+	animation-duration: 10s;
+}
+.box-area img:nth-child(3) {
+	left: 70%;
+	width: 15vmin;
+	height: 15vmin;
+	animation-delay: 5.5s;
+}
+.box-area img:nth-child(4) {
+	left: 42%;
+	width: 20vmin;
+	height: 20vmin;
+	animation-delay: 0s;
+	animation-duration: 15s;
+}
+.box-area img:nth-child(5) {
+	left: 65%;
+	width: 8vmin;
+	height: auto;
+	animation-delay: 0s;
+}
+.box-area img:nth-child(6) {
+	left: 15%;
+	width: 13vmin;
+	height: 13vmin;
+	animation-delay: 3.5s;
+}
+
+@keyframes animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-800px) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+.custom-shape-divider-top-1607747801 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    display:none;
+}
+
+.custom-shape-divider-top-1607747801 svg {
+    position: relative;
+    display: block;
+    width: calc(121% + 1.3px);
+    height: 132px;
+    display:none;
+}
+
+.custom-shape-divider-top-1607747801 .shape-fill {
+    fill: #171B60;
+    display:none;
+}
+
+.custom-shape-divider-bottom-1607752178 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    display:none;
+}
+
+.custom-shape-divider-bottom-1607752178 svg {
+    position: relative;
+    display: block;
+    width: calc(153% + 1.3px);
+    height: 58px;
+    display:none;
+}
+
+.custom-shape-divider-bottom-1607752178 .shape-fill {
+    fill: #171B60;
+    display:none;
+}
+@media screen and (max-width:790px) {
+  .banner-text .ul {
+	height: auto;
+	float: left;
+        text-align:center;
+        display:grid;
+	grid-template-columns: 33% 33% 33%;
+	justify-content: space-evenly;
+        width: 100%;
+  }
+  .banner-text .ul .li {
+	display: inline-block;
+	padding: 2.5vmin 1vmin;
+	padding-bottom:0px;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 20px;
+  }
+}
+
 </style>
   </head>
 <body>
@@ -191,6 +365,48 @@
       </div>
     </div>
 
+    <div class="banner-text">
+      <h2>STEAM Careers</h2>
+    </div>
+    <div class="animation-area">
+<div class="box-area">
+<!-- Image MLA Citation: 
+UnboxScience. “Science Beaker” Pixabay, 28 August 2015, 
+https://pixabay.com/illustrations/flask-beaker-science-laboratory-908887/. Accessed 16 December 2020.
+-->
+<img src="https://roboticsdev1584.github.io/burn-out-short-story/Other_Images/science.png"></img>
+
+<!-- Image MLA Citation: 
+IO-Images. “Mobile Phone” Pixabay, 11 January 2016, 
+https://pixabay.com/vectors/smartphone-mobile-phone-phone-1132675/. Accessed 16 December 2020.
+-->
+<img></img>
+
+<!-- Image MLA Citation: 
+Samuel1983. “Gear” Pixabay, 6 January 2016, 
+https://pixabay.com/vectors/gear-mechanics-settings-icon-1119298/. Accessed 16 December 2020.
+-->
+<img src="https://roboticsdev1584.github.io/burn-out-short-story/Other_Images/engineering.png"></img>
+
+<!-- Image MLA Citation: 
+OpenClipart-Vectors. “Paint Brush” Pixabay, 31 March 2016, 
+https://pixabay.com/vectors/artist-colorful-paint-brush-palette-1297400/. Accessed 16 December 2020.
+-->
+<img src="https://roboticsdev1584.github.io/burn-out-short-story/Other_Images/art.png"></img>
+
+<!-- Image MLA Citation: 
+Cheskapoondesignstudio. “Calculator” Pixabay, 7 June 2017, 
+https://pixabay.com/illustrations/calculator-numbers-0-1-2-3-4-5-2374442/. Accessed 16 December 2020.
+-->
+<img src="https://roboticsdev1584.github.io/burn-out-short-story/Other_Images/math.png"></img>
+
+<!-- Image MLA Citation: 
+Protic, Shafin. “Electrical Circuit” Pixabay, 3 May 2020, 
+https://pixabay.com/illustrations/circuit-ic-chip-technology-5115478/. Accessed 16 December 2020.
+-->
+<img src="https://roboticsdev1584.github.io/burn-out-short-story/Other_Images/technology2.png"></img>
+</div>
+</div>
     <!-- Header -->
 
     <!--<header class="w3-container w3-red w3-center" style="padding:128px 16px">
@@ -200,11 +416,12 @@
     </header>-->
 
     <!-- First Grid -->
-    <div class="w3-row-padding w3-white w3-padding-64 w3-container">
+    <div class="w3-row-padding w3-white w3-padding-64 w3-container" id="scienceC">
       <div class="w3-content w3-white">
 	<div class="w3-twothird w3-white">
+
 	  <h1><a href="science.html">Science</a></h1>
-	  	  <h5 class="w3-padding-32">11111111111some important science stuff here like a quote</h5>
+	  	  <h5 class="w3-padding-32">some important science stuff here like a quote</h5>
 
 	  <p class="w3-text-grey">some less important science stuff here like importance of science</p>
 	</div>
@@ -217,7 +434,7 @@
 
     <!-- Second Grid -->
 
-    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="techC">
       <div class="w3-content w3-light-grey">
 	<div class="w3-third w3-center w3-light-grey">
 	  <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right w3-light-grey"></i>
@@ -234,7 +451,7 @@
       </div>
     </div>
     <!-- Third Grid -->
-    <div class="w3-row-padding w3-white w3-padding-64 w3-container">
+    <div class="w3-row-padding w3-white w3-padding-64 w3-container" id="engineeringC">
       <div class="w3-content w3-white">
 	<div class="w3-twothird w3-white">
 	  <h1>Engineering</h1>
@@ -252,14 +469,14 @@
     </div>
 
     <!-- Fourth Grid -->
-    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="artC">
       <div class="w3-content w3-light-grey">
 	<div class="w3-third w3-center w3-light-grey">
 	  <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right w3-light-grey"></i>
 	</div>
 
 	<div class="w3-twothird w3-light-grey">
-	  <h1>Arts</h1>
+	  <h1>Art</h1>
 	  <h5 class="w3-padding-32 w3-light-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
 
 	  <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
@@ -270,7 +487,7 @@
     </div>
 
     <!-- Fifth Grid -->
-    <div class="w3-row-padding w3-white w3-padding-64 w3-container">
+    <div class="w3-row-padding w3-white w3-padding-64 w3-container" id="mathC">
       <div class="w3-content w3-white">
 	<div class="w3-twothird w3-white">
 	  <h1>Math</h1>
@@ -291,7 +508,7 @@
   </div>
     <!-- Footer -->
     <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey">
-      <p>By the <a href="https://www.allenisd.org/domain/5491" target="_blank">Allen STEAM Ambassadors</a></p>
+      <p>By the <a href="https://www.allenisd.org/domain/5491" target="_blank">Allen ISD STEAM Ambassadors</a></p>
     </footer>
       <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
   </body>
@@ -328,5 +545,3 @@
       }
     </script>
 </html>
-
-
