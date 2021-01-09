@@ -338,6 +338,7 @@
 	text-transform: uppercase;
 	color: #fff;
 	font-size: 20px;
+  float:top;
   }
 }
 /*End of home page animation styling*/
@@ -350,6 +351,24 @@
 .cImage {
   width:200px;
   height:auto;
+}
+#search {
+  position:relative;
+  width:180px;
+  right:0;
+  font-size:18px;
+  transition: width 2s;
+  transition-timing-function:ease;
+}
+#search:active, #search:hover {
+  width:100%;
+}
+.searchbar {
+  position:fixed;
+  width:100%;
+  z-index:99; 
+  float:top;
+  background-color:none;
 }
 </style>
   </head>
@@ -373,7 +392,13 @@
 	<a href="arts.html" class="w3-bar-item w3-button w3-padding-large">Art</a>
 	<a href="math.html" class="w3-bar-item w3-button w3-padding-large">Math</a>
       </div>
+      <div class="searchbar">
+        <input type="text" id="search" onkeyup="searchResults()" placeholder="Search..." />
+        <div id="outputC">
+        </div>
+        </div>
     </div>
+
 
     <div class="banner-text">
       <h2>STEAM Careers</h2>
@@ -431,9 +456,11 @@ https://pixabay.com/illustrations/circuit-ic-chip-technology-5115478/. Accessed 
 	<div class="w3-twothird w3-white">
 
 	  <h1><a href="science.html">Science</a></h1>
-	  	  <h5 class="w3-padding-32">some important science stuff here like a quote</h5>
+	  	  <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
 
-	  <p class="w3-text-grey">some less important science stuff here like importance of science</p>
+	  <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+	    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+	    laboris nisi ut aliquip ex ea commodo consequat.</p>
 	</div>
 
 	<div class="w3-third w3-center w3-white">
@@ -553,5 +580,114 @@ https://pixabay.com/illustrations/circuit-ic-chip-technology-5115478/. Accessed 
           document.body.scrollTop = 0;
           document.documentElement.scrollTop = 0;
       }
+      /*This is where all of the scripting for the search bar takes place*/
+      var array = ["Cyber Security", "Neurologist", "Data Scientist", "Astronomer"]; //these are example search results that the user can search for, this set of values should be set
+var maxResults = 5; //This is the maximum number of results that will pop up in the keyword search. Set to any valid number.
+var obj = {};
+var tempString = "";
+
+function hoverStyleP(pElement) {
+//This is used to change the color of search results background when hovered over
+  pElement.style.backgroundColor = "#737373"; //#cccccc
+}
+function styleP(pElement) {//This is used to style each of the search results, change for better results
+  pElement.style.width = "160px";
+  pElement.style.height = "auto";
+  pElement.style.color = "white";
+  pElement.style.backgroundColor = "#595959";
+  pElement.style.fontSize = "15px";
+  pElement.style.padding = "0.5vmin";
+  pElement.style.margin = "0vmin";
+  //pElement.style.textAlign = "center";
+}
+function styleA(aElement) {//This is used to style the anchor tags, change for better results
+  aElement.style.color="white";
+  aElement.style.textDecoration= "none";
+}
+function appendDiv(temp, txtOptDiv) {
+  var pElement = document.createElement("P"); //this creates a new <p> element
+  var aElement = document.createElement("A"); //this creates a new <a> element
+  var txt = document.createTextNode(temp); //this puts the search result into a text field
+  var link = `#${temp}`;
+  aElement.href=link;
+  styleA(aElement);
+  aElement.appendChild(pElement);
+  pElement.appendChild(txt); //this places the text inside of the new element
+  pElement.onmouseover=function() {hoverStyleP(pElement)};
+  pElement.onmouseout=function() {styleP(pElement)};
+  styleP(pElement);
+  txtOptDiv.appendChild(aElement); //this appends the new element to the content div
+}
+function clearDiv(txtOptDiv) {
+  while(txtOptDiv.firstChild) {
+    txtOptDiv.removeChild(txtOptDiv.firstChild);
+  }
+}
+function searchResults() {
+  obj = {};
+  var highestCount = -1;
+  var cont = true;
+  var cont2 = true;
+  var cont3 = true;
+  var txtIpt = document.getElementById("search").value;
+  var txtIptL = txtIpt.toLowerCase();
+  var txtOptDiv = document.getElementById("outputC");
+  clearDiv(txtOptDiv); //this is used to make sure that the search results are cleared after each use
+  for (var index=0; index<array.length; index++) {
+    temp = array[index];
+    tempL = array[index].toLowerCase()
+    if (tempL == txtIptL) { //eliminate all other results on a perfect match
+      cont2 = false;
+      appendDiv(temp, txtOptDiv);
+      break;
+    }
+  }
+  if (cont2) { //if a perfect match was not already found
+  for (var index=0; index<array.length; index++) { //this searches the entire list
+    cont=true;
+    var temp = array[index];
+    var tempL = temp.toLowerCase();
+    var count = 0;
+    for (var i=0; i<tempL.length; i++) { //this searches each character inside of string for each element of the array
+      for(var i2=0; i2<txtIptL.length; i2++) { //this searches each character inside of the input string separately
+        if (tempL[i] == txtIptL[i2]) {
+          cont=false;
+          count++;
+          break;
+        }
+      }
+      /*if (!cont) { //same thing as if cont == false
+        break;
+      }*/
+    }
+    if (count > highestCount) {
+      highestCount = count; //this updates the highest counted number (most accurate search result)
+    }
+    obj[temp] = count; //this updates the count for each item
+  }
+  var objectLength = Object.keys("obj").length; //this returns the object's length, not needed right now
+  //this is used to make sure that the search results appear in the highest order first
+  var resultCounter = 0;
+  for (var index=highestCount; index>0; index--) {
+    for (var index2=0; index2<array.length; index2++) {
+      var temp3 = array[index2];
+      var temp4 = obj[temp3];
+      if (resultCounter == maxResults) {
+        cont3=false;
+        break;
+      }
+      if (temp4 == index) {
+        //alert("Search result found!");
+        resultCounter++;
+        appendDiv(temp3, txtOptDiv); //this takes care of updating the search results
+      }
+    }
+    if (!cont3) { //same thing as cont3 == false
+      break;
+    }
+  }
+  }
+}
+
     </script>
 </html>
