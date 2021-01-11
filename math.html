@@ -110,7 +110,7 @@
   .w3-right{float:right!important}
   .w3-button:hover{color:#000!important;background-color:#ccc!important}
   /* Colors */
-  .w3-red,.w3-hover-red:hover{color:#fff!important;background-color:#f44336!important}
+  .w3-red,.w3-hover-red:hover{color:#fff!important;background-color:#f44336}
   .w3-white,.w3-hover-white:hover{color:#000!important;background-color:#fff!important}
   .w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
     
@@ -235,7 +235,7 @@
     </div>
     <!-- Header -->
 
-    <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+    <header class="w3-container w3-red w3-center" style="padding:128px 16px; background-color:#c03b2a;"><!--Change right here-->
       <h1 class="w3-margin w3-jumbo">Math</h1>
     </header>
 
@@ -354,13 +354,13 @@ var tempString = "";
 
 function hoverStyleP(pElement) {
 //This is used to change the color of search results background when hovered over
-  pElement.style.backgroundColor = "#737373"; //#cccccc
+  pElement.style.backgroundColor = "#b3b3b3"; //was #737373
 }
 function styleP(pElement) {//This is used to style each of the search results, change for better results
   pElement.style.width = "160px";
   pElement.style.height = "auto";
-  pElement.style.color = "white";
-  pElement.style.backgroundColor = "#595959";
+  pElement.style.color = "black";
+  pElement.style.backgroundColor = "#d9d9d9";//used to be #595959
   pElement.style.fontSize = "15px";
   pElement.style.padding = "0.5vmin";
   pElement.style.margin = "0vmin";
