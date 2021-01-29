@@ -1,0 +1,702 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+  <title>STEAM Careers - Technology</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="https://roboticsdev1584.github.io/STEAM-Tour/favicon.ico" type="image/x-icon">
+
+  <style>
+    /*This is for the button styling*/
+    body {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 20px;
+      }
+      #myBtn {
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 30px;
+          z-index: 99;
+          font-size: 18px;
+          border: none;
+          outline: none;
+          background-color: #171B60;
+          color: white;
+          cursor: pointer;
+          padding: 15px;
+          border-radius: 4px;
+      }
+      #myBtn:hover {
+          background-color: #555;
+      }
+    /*Original styling on the sheet*/
+        body,h1,h2,h3,h4,h5,h6 {
+        	font-family: "Lato", sans-serif
+        }
+    .w3-bar,h1,button {
+    	font-family: "Montserrat", sans-serif
+    }
+  html{box-sizing:border-box; scroll-behavior:smooth;}*,*:before,*:after{box-sizing:inherit;}
+  /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+  html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+  article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}summary{display:list-item}
+  audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
+  audio:not([controls]){display:none;height:0}[hidden],template{display:none}
+  a{background-color:transparent; text-decoration:none;}a:active,a:hover{outline-width:0}
+  abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+  b,strong{font-weight:bolder}dfn{font-style:italic}mark{background:#ff0;color:#000}
+  small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+  sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}img{border-style:none}
+  code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;overflow:visible}
+  button,input,select,textarea,optgroup{font:inherit;margin:0}optgroup{font-weight:bold}
+  button,input{overflow:visible}button,select{text-transform:none}
+  button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button}
+  button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}
+  button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}
+  fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}
+  legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}
+  [type=checkbox],[type=radio]{padding:0}
+  [type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
+  [type=search]{-webkit-appearance:textfield;outline-offset:-2px}
+  [type=search]::-webkit-search-decoration{-webkit-appearance:none}
+  ::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+  /* End extract */
+  html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
+  h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}
+  h1,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}
+  a{color:inherit}
+  .w3-btn,.w3-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+  .w3-btn:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
+  .w3-btn,.w3-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+  .w3-btn:disabled,.w3-button:disabled{cursor:not-allowed;opacity:0.3}
+  .w3-btn.w3-disabled:hover,.w3-btn:disabled:hover{box-shadow:none}
+  .w3-bar-block .w3-dropdown-hover,.w3-bar-block .w3-dropdown-click{width:100%}
+  .w3-bar-block .w3-dropdown-hover .w3-dropdown-content,.w3-bar-block .w3-dropdown-click .w3-dropdown-content{min-width:100%}
+  .w3-bar-block .w3-dropdown-hover .w3-button,.w3-bar-block .w3-dropdown-click .w3-button{width:100%;text-align:left;padding:8px 16px}
+  .w3-bar{width:100%;overflow:hidden}.w3-center .w3-bar{display:inline-block;width:auto}
+  .w3-bar .w3-bar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0}
+  .w3-bar .w3-dropdown-hover,.w3-bar .w3-dropdown-click{position:static;float:left}
+  .w3-bar .w3-button{white-space:normal}
+  .w3-bar-block .w3-bar-item{width:100%;display:block;padding:8px 16px;text-align:left;border:none;white-space:normal;float:none;outline:0}
+  .w3-bar-block.w3-center .w3-bar-item{text-align:center}.w3-block{display:block;width:100%}
+  .w3-container:after,.w3-container:before,.w3-panel:after,.w3-panel:before,.w3-row:after,.w3-row:before,.w3-row-padding:after,.w3-row-padding:before,
+  .w3-cell-row:before,.w3-cell-row:after,.w3-clear:after,.w3-clear:before,.w3-bar:before,.w3-bar:after{content:"";display:table;clear:both}
+  .w3-col,.w3-half,.w3-third,.w3-twothird,.w3-threequarter,.w3-quarter{float:left;width:100%}
+  @media (min-width:768px){.w3-third{width:33.33333%}.w3-twothird{width:66.66666%}}
+  .w3-content{margin-left:auto;margin-right:auto}.w3-content{max-width:980px}
+  .w3-hide{display:none!important}.w3-show{display:block!important}
+  @media (max-width:768px){.w3-modal-content{margin:0 10px;width:auto!important}.w3-modal{padding-top:30px}
+    .w3-hide-small{display:none!important}.w3-bar-item.w3-mobile{text-align:center}
+    .w3-dropdown-hover.w3-mobile,.w3-dropdown-hover.w3-mobile .w3-btn,.w3-dropdown-hover.w3-mobile .w3-button,.w3-dropdown-click.w3-mobile,.w3-dropdown-click.w3-mobile .w3-btn,.w3-dropdown-click.w3-mobile .w3-button{width:100%}}
+  @media (max-width:768px){.w3-modal-content{width:500px}.w3-modal{padding-top:50px}}
+  @media (min-width:993px){.w3-modal-content{width:900px}.w3-hide-large{display:none!important}}
+  @media (max-width:992px) and (min-width:768px){.w3-hide-medium{display:none!important}}
+  .w3-top{position:fixed;width:100%;z-index:99; top:0; background-color: #171B60;
+  color: #ffffff;}
+  .w3-row-padding,.w3-row-padding>.w3-half,.w3-row-padding>.w3-third,.w3-row-padding>.w3-twothird,.w3-row-padding>.w3-threequarter,.w3-row-padding>.w3-quarter,.w3-row-padding>.w3-col{padding:0 8px}  
+  .w3-container{padding:0.01em 16px}
+  .w3-card{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+  .w3-opacity,.w3-hover-opacity:hover{opacity:0.60}
+  .w3-large{font-size:18px!important}
+  .w3-xlarge{font-size:24px!important}.w3-jumbo{font-size:52px}
+  .w3-left-align{text-align:left!important}.w3-center{text-align:center!important}
+  .w3-margin{margin:16px!important}.w3-margin-right{margin-right:16px!important}
+  .w3-padding{padding:8px 16px!important}.w3-padding-large{padding:12px 24px!important}
+  .w3-padding-32{padding-top:32px!important;padding-bottom:32px!important}
+  .w3-padding-64{padding-top:64px!important;padding-bottom:64px!important} 
+  .w3-right{float:right!important}
+  .w3-button:hover{color:#000!important;background-color:#ccc!important}
+  /* Colors */
+  .w3-red,.w3-hover-red:hover{color:#fff!important;background-color:#f44336}
+  .w3-white,.w3-hover-white:hover{color:#000!important;background-color:#fff!important}
+  .w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
+    
+  /* latin-ext */
+  @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* vietnamese */
+  @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+.menuBar {
+  width: 30px;
+  height: 5px;
+  background-color: black;
+  margin: 3px 0;
+}
+.cImage {
+  width:300px;
+  height:auto;
+}
+#search {
+  position:relative;
+  width:180px;
+  right:0;
+  font-size:18px;
+  transition: width 2s;
+  transition-timing-function:ease;
+}
+#search:active, #search:hover {
+  width:100%;
+}
+.searchbar {
+  position:fixed;
+  width:100%;
+  z-index:99; 
+  float:top;
+  background-color:none;
+}
+.linkC {
+  text-decoration:underline;
+}
+.w3-container {
+  overflow:hidden;
+}
+/*Change the font of the header here*/
+/*header { 
+  font-face:;
+}*/
+</style>
+  </head>
+<body>
+    <div class="w3-top">
+      <div class="w3-bar w3-card w3-left-align w3-large">
+	<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><div class="menuBar"></div><div class="menuBar"></div><div class="menuBar"></div></a>
+	<a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+	<a href="science.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Science</a>
+	<a href="technology.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-white">Technology</a>
+	<a href="engineering.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Engineering</a>
+	<a href="art.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Art</a>
+	<a href="math.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Math</a>
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+	<a href="science.html" class="w3-bar-item w3-button w3-padding-large">Science</a>
+	<a href="technology.html" class="w3-bar-item w3-button w3-padding-large">Technology</a>
+	<a href="engineering.html" class="w3-bar-item w3-button w3-padding-large">Engineering</a>
+	<a href="art.html" class="w3-bar-item w3-button w3-padding-large">Art</a>
+	<a href="math.html" class="w3-bar-item w3-button w3-padding-large">Math</a>
+      </div>
+      <div class="searchbar">
+        <input type="text" id="search" onkeyup="searchResults()" placeholder="Search..." />
+        <div id="outputC">
+        </div>
+        </div>
+    </div>
+    <!-- Header -->
+
+    <header class="w3-container w3-red w3-center" style="padding:128px 16px; background-color:#c03b2a;">
+      <h1 class="w3-margin w3-jumbo">Technology</h1>
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-white w3-padding-64 w3-container" id="scienceC">
+      <div class="w3-content w3-white">
+	<div class="w3-twothird w3-white">
+
+	  <h1>AI Computer Scientist</h1>
+      <h5 class="w3-padding-32 linkC"><a href="https://drive.google.com/file/d/1zf8j3HNzXs4E19z8KV-sotDh20aC_1mn/view?usp=sharing" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/1kfX9Nli3epGI3Bhn4R94e_UWyHJ_4JJypeCNjHASpmY/edit" target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">Artificial Intelligence can be separated into two different categories, Narrow AI (Weak AI) and Artificial General Intelligence (AGI or Strong AI). Narrow AI can perform a single task very well, while AGI has intelligence much like humans.</p>
+	</div>
+
+	<div class="w3-third w3-center w3-white">
+	  <a href="https://drive.google.com/file/d/1zf8j3HNzXs4E19z8KV-sotDh20aC_1mn/view?usp=sharing" target="_blank"><img class="cImage fa fa-anchor w3-padding-64 w3-text-red w3-white" src="Other_Images/scienceC.png" alt="one pager image here"></img></a>
+	</div>
+      </div>
+    </div>
+
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="techC">
+      <div class="w3-content w3-light-grey">
+	<div class="w3-third w3-center w3-light-grey">
+    <a href="https://drive.google.com/file/d/1my0pRY0LbJt_78OtweUqeBxkygCxwnTh/view" target="_blank"><img class="cImage fa fa-coffee w3-padding-64 w3-text-red w3-margin-right w3-light-grey" src="Other_Images/technology2C.png" alt="one pager image here"></img></a>
+	</div>
+
+	<div class="w3-twothird w3-light-grey">
+	  <h1>Computer Engineering</h1>
+	    <h5 class="w3-padding-32 w3-light-grey linkC"><a href="https://drive.google.com/file/d/1my0pRY0LbJt_78OtweUqeBxkygCxwnTh/view" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/1JxL1lERgho3TXHstriShZZ5KpGltEmP3TGHxvzcvqtw/edit#slide=id.g35f391192_00" target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">Computer Engineering is a branch of engineering that combines both computer science and electronic engineering to develop hardware and software.</p>
+	</div>
+      </div>
+    </div>
+<!-- Third Grid -->
+    <div class="w3-row-padding w3-white w3-padding-64 w3-container" id="scienceC">
+      <div class="w3-content w3-white">
+	<div class="w3-twothird w3-white">
+
+	  <h1>Computer Network Architect</h1>
+      <h5 class="w3-padding-32 linkC"><a href="https://drive.google.com/file/d/1LGJg_CjYb3SuTLfUJs3dC_pirAB9Js63/view" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/19CQyM2ciuGHP9bkgj2acBTbHPMq9qQ85oAb4CD858IA/edit#slide=id.g35f391192_00" target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">Computer Network Architecture is define as the physical and logical design of the software, hardware, protocols, and media of the transmission of data.</p>
+	</div>
+
+	<div class="w3-third w3-center w3-white">
+	  <a href="https://drive.google.com/file/d/1LGJg_CjYb3SuTLfUJs3dC_pirAB9Js63/view" target="_blank"><img class="cImage fa fa-anchor w3-padding-64 w3-text-red w3-white" src="Other_Images/scienceC.png" alt="one pager image here"></img></a>
+	</div>
+      </div>
+    </div>
+
+    <!-- Fourth Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="techC">
+      <div class="w3-content w3-light-grey">
+	<div class="w3-third w3-center w3-light-grey">
+    <a href="https://drive.google.com/drive/folders/19QhMI6Cs0gRCm1Xpk4FqiYCWV_J4hntF" target="_blank"><img class="cImage fa fa-coffee w3-padding-64 w3-text-red w3-margin-right w3-light-grey" src="Other_Images/technology2C.png" alt="one pager image here"></img></a>
+	</div>
+
+	<div class="w3-twothird w3-light-grey">
+	  <h1>Computer Science</h1>
+	    <h5 class="w3-padding-32 w3-light-grey linkC"><a href="https://drive.google.com/drive/folders/19QhMI6Cs0gRCm1Xpk4FqiYCWV_J4hntF" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/1BLmMR2NIhZwurkm46K7Hn54dfYrOX2SYMfeDDehmsUc/edit#slide=id.g35f391192_00" target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">Computer Scientists use technology and write computer code & programs in order to creatively and efficiently solve problems. They sometimes also develop models for human-technology interaction, which involved AI and machine learning. Their overall goal is to create software to solve a problem, or make technology more efficient</p>
+	</div>
+      </div>
+    </div>
+<!-- Fifth Grid -->
+    <div class="w3-row-padding w3-white w3-padding-64 w3-container" id="scienceC">
+      <div class="w3-content w3-white">
+	<div class="w3-twothird w3-white">
+
+	  <h1>Computer Systems Engineer</h1>
+      <h5 class="w3-padding-32 linkC"><a href="https://drive.google.com/file/d/1Gi_hVF1aDMws2AYQa5aJw9UL39GM2Zco/view?usp=sharing" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/1NCMA4Lf7-Hx_CG7X0nsZTuuJKAfUumalcrq3hqE21fU/edit?usp=sharing" target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">Computer System Engineers are in charge of developing and curating designs to complex applications, system issues, and/or network concerns. They also manage systems and perform integration functions.</p>
+	</div>
+
+	<div class="w3-third w3-center w3-white">
+	  <a href="https://drive.google.com/file/d/1Gi_hVF1aDMws2AYQa5aJw9UL39GM2Zco/view?usp=sharing" target="_blank"><img class="cImage fa fa-anchor w3-padding-64 w3-text-red w3-white" src="Other_Images/scienceC.png" alt="one pager image here"></img></a>
+	</div>
+      </div>
+    </div>
+
+    <!-- Sixth Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="techC">
+      <div class="w3-content w3-light-grey">
+	<div class="w3-third w3-center w3-light-grey">
+    <a href="https://drive.google.com/file/d/1whHTXo2pcthqtGKn7JXdaA2hhlFtzttM/view" target="_blank"><img class="cImage fa fa-coffee w3-padding-64 w3-text-red w3-margin-right w3-light-grey" src="Other_Images/technology2C.png" alt="one pager image here"></img></a>
+	</div>
+
+	<div class="w3-twothird w3-light-grey">
+	  <h1>Cryptographer</h1>
+	    <h5 class="w3-padding-32 w3-light-grey linkC"><a href="https://drive.google.com/file/d/1whHTXo2pcthqtGKn7JXdaA2hhlFtzttM/view" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/18KzRxu7kmoVk-PipatgZu43zN0p5zbJkaVF6xwtYgJM/edit#slide=id.gb0c73901db_0_50" target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">A Cryptographer’s roles are many and varied and they depend on the organization that they work for. A cryptographer will need to understand cryptographic security systems and their related algorithms. They design robust and secure systems that are not vulnerable to penetration or hacking. Cryptographers develop and use mathematical or statistical models. 
+</p>
+	</div>
+      </div>
+    </div>
+<!-- Seventh Grid -->
+    <div class="w3-row-padding w3-white w3-padding-64 w3-container" id="scienceC">
+      <div class="w3-content w3-white">
+	<div class="w3-twothird w3-white">
+
+	  <h1>Data Scientist</h1>
+      <h5 class="w3-padding-32 linkC"><a href="https://docs.google.com/document/d/1XGSx7G9vz6Y5Lij26HTnT9Vkevnj3GGe9W7dROIdAMc/edit?usp=sharing" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/1bRqVKnFyu03uUXSHrHireRdpKXJo7mE7TrFoA88ZKpA/edit#slide=id.g35f391192_00" target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">Data Science is a field that uses a combination of programming and mathematics/statistics to analyze data for practical and useful insights. Simply put, data scientists are expected to make value out of data. They then design algorithms and predictive models to measure and improve results, and present it. From there, their solutions and feedback are put in place, and they repeat the process. </p>
+	</div>
+
+	<div class="w3-third w3-center w3-white">
+	  <a href="https://docs.google.com/document/d/1XGSx7G9vz6Y5Lij26HTnT9Vkevnj3GGe9W7dROIdAMc/edit?usp=sharing" target="_blank"><img class="cImage fa fa-anchor w3-padding-64 w3-text-red w3-white" src="Other_Images/scienceC.png" alt="one pager image here"></img></a>
+	</div>
+      </div>
+    </div>
+
+    <!-- Eighth Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="techC">
+      <div class="w3-content w3-light-grey">
+	<div class="w3-third w3-center w3-light-grey">
+    <a href="https://drive.google.com/file/d/1AHHQOj7WKSKc1t5oPK065W2M9XyzIwDA/view" target="_blank"><img class="cImage fa fa-coffee w3-padding-64 w3-text-red w3-margin-right w3-light-grey" src="Other_Images/technology2C.png" alt="one pager image here"></img></a>
+	</div>
+
+	<div class="w3-twothird w3-light-grey">
+	  <h1>Database Architect</h1>
+	    <h5 class="w3-padding-32 w3-light-grey linkC"><a href="https://drive.google.com/file/d/1AHHQOj7WKSKc1t5oPK065W2M9XyzIwDA/view" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/1xqoJl74LFT2WhoM3qz3ZbN51KGd4wjDus_274uzI_iE/edit?usp=sharing target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">Database Architects work closely with software designers, design analysts and others to create comprehensive databases that may be used by hundreds of people. Database architects prepare and map out how the electronic database should look and function.
+</p>
+	</div>
+      </div>
+    </div>
+<!-- Ninth Grid -->
+    <div class="w3-row-padding w3-white w3-padding-64 w3-container" id="scienceC">
+      <div class="w3-content w3-white">
+	<div class="w3-twothird w3-white">
+
+	  <h1>Game Developer</h1>
+      <h5 class="w3-padding-32 linkC"><a href="https://drive.google.com/file/d/1-VacWWPykx4IKg1bz_MIJ49dUGUcwfzN/view" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/1vf9TnJH_P8ZQstlelBbvIQQTWogxCrjr0Op3e9hq8Eg/edit#slide=id.g35f391192_00" target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">Game Developers have to be creative thinkers, they come up with new ideas and updates to make for video games. They are responsible for designing and developing video games for PC, console, and mobile applications. Their job is to code the base engine from the ideas of the design team. They can also do character design, level design, animation, and unit testing.</p>
+	</div>
+
+	<div class="w3-third w3-center w3-white">
+	  <a href="https://drive.google.com/file/d/1-VacWWPykx4IKg1bz_MIJ49dUGUcwfzN/view" target="_blank"><img class="cImage fa fa-anchor w3-padding-64 w3-text-red w3-white" src="Other_Images/scienceC.png" alt="one pager image here"></img></a>
+	</div>
+      </div>
+    </div>
+
+    <!-- Tenth Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="techC">
+      <div class="w3-content w3-light-grey">
+	<div class="w3-third w3-center w3-light-grey">https://drive.google.com/file/d/1ZcAdMb6K6lgtk-wq1exW4HOTLUci0tl8/view	</div>
+
+	<div class="w3-twothird w3-light-grey">
+	  <h1>Software Engineer</h1>
+	    <h5 class="w3-padding-32 w3-light-grey linkC"><a href="https://drive.google.com/file/d/1ZcAdMb6K6lgtk-wq1exW4HOTLUci0tl8/view" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/1DoID17ofpBAvBwfku23vxeny3u25C-qpnl_RPTNgVXc/edit#slide=id.g35f391192_00" target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">Depending on the company you work at, Software Engineers develop software for video games, programs, and security systems. There are two types of Software Engineers: Application and Systems. Application Software Engineers develop code for actual products, for example like mobile phones and other electronic devices. System Software Engineers develops code for user-facing applications.</p>
+	</div>
+      </div>
+    </div>
+<!-- Eleventh Grid -->
+    <div class="w3-row-padding w3-white w3-padding-64 w3-container" id="scienceC">
+      <div class="w3-content w3-white">
+	<div class="w3-twothird w3-white">
+
+	  <h1>Software Testing Engineer</h1>
+      <h5 class="w3-padding-32 linkC"><a href="https://drive.google.com/file/d/1EBxkiNUu2KBQ26NjtgtTNTsdU1Wpr_Mo/view" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/1zyG-a86ocL4z0NEti-x9nJT2SK4npelnh8WbbvBOTgs/edit#slide=id.p" target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">Software Testers create and implement software tests to debug and resolve issues within software. In addition, they may participate in software design review to give input on the requirements, attributes, the designs, and schedule.</p>
+	</div>
+
+	<div class="w3-third w3-center w3-white">
+	  <a href="https://drive.google.com/file/d/1EBxkiNUu2KBQ26NjtgtTNTsdU1Wpr_Mo/view" target="_blank"><img class="cImage fa fa-anchor w3-padding-64 w3-text-red w3-white" src="Other_Images/scienceC.png" alt="one pager image here"></img></a>
+	</div>
+      </div>
+    </div>
+
+    <!-- Twelveth Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="techC">
+      <div class="w3-content w3-light-grey">
+	<div class="w3-third w3-center w3-light-grey">
+    <a href="https://drive.google.com/file/d/1KCYQRTU3DGtdHlwK2xhurSYgtQKhLhui/view" target="_blank"><img class="cImage fa fa-coffee w3-padding-64 w3-text-red w3-margin-right w3-light-grey" src="Other_Images/technology2C.png" alt="one pager image here"></img></a>
+	</div>
+
+	<div class="w3-twothird w3-light-grey">
+	  <h1>UI Designer</h1>
+	    <h5 class="w3-padding-32 w3-light-grey linkC"><a href="https://drive.google.com/file/d/1KCYQRTU3DGtdHlwK2xhurSYgtQKhLhui/view" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/1oPu4YgirB9Jh-4uehwl53iV6fRnoRBHA-KeKYlk7H5M/edit#slide=id.g35f391192_00" target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">A UI designer conducts user research, designs, prototypes, and implements innovative ways to improve the user interface. They consider all the visual, interactive elements of a product interface—including buttons, icons, spacing, typography, color schemes, and responsive design. A Ui designer thinks about how the online experience makes the user feel, and how easy it is for the user to accomplish their desired tasks—like online shop.</p>
+	</div>
+      </div>
+    </div>
+    <!-- Related Career Grid -->
+    <div class="w3-row-padding w3-white w3-padding-32 w3-container" id="techC">
+      <h1 style="text-align:center;">Related Careers</h1>
+    </div>
+    <!-- 1st Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="engineeringC">
+      <div class="w3-content w3-light-grey">
+	<div class="w3-twothird w3-light-grey">
+	  <h1>Computer/Electrical Engineering</h1>
+      <h5 class="w3-padding-32 linkC"><a href="https://drive.google.com/file/d/12LubSixc8gaKwpXgNd234MTbRkayl9pN/view" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/1h9paG-E0BJgKHKENOQ5Y5j_Plq9yZxi-5EnDQu9IYRU/edit#slide=id.p" target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">The field of electrical and computer engineering sets you up for a career in technology. While a mechanical engineering degree is probably the most versatile of all degrees, allowing for one to generalize in a variety of fields, the electrical and computer engineering degree (or ECE), gives you both a general understanding of computers and electricity, and also allows for you to specialize in a field like nanotechnology or renewable energy. 
+</p>
+	</div>
+
+	<div class="w3-third w3-center w3-white">
+	  <a href="https://drive.google.com/file/d/12LubSixc8gaKwpXgNd234MTbRkayl9pN/view" target="_blank"><img class="cImage fa fa-anchor w3-padding-64 w3-text-red w3-white" src="Other_Images/engineeringC.png" alt="engineering"></img></a>
+	</div>
+      </div>
+    </div>
+    <!-- 2nd Grid -->
+    <div class="w3-row-padding w3-white w3-padding-64 w3-container" id="techC">
+      <div class="w3-content w3-white">
+	<div class="w3-third w3-center w3-white">
+    <a href="https://drive.google.com/file/d/1vaADhmOlBL3CI1iS0nYr5yiI75FuNi_M/view" target="_blank"><img class="cImage fa fa-coffee w3-padding-64 w3-text-red w3-margin-right w3-light-grey" src="Other_Images/technology2C.png" alt="one pager image here"></img></a>
+	</div>
+
+	<div class="w3-twothird w3-white">
+	  <h1>Electrical Engineer</h1>
+	    <h5 class="w3-padding-32 w3-white linkC"><a href="https://drive.google.com/file/d/1vaADhmOlBL3CI1iS0nYr5yiI75FuNi_M/view" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/1CkqLFcsaqeRzv-cvrLLtiMYI-ip6hzSFuLZ2eoDK-Bc/edit#slide=id.p" target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">Electrical engineers research, design, develop, test, and supervise various installation and manufacturing of equipment, components, and systems for various uses like commercial and industrial.
+</p>
+	</div>
+      </div>
+    </div>
+	 <!-- 3rd Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="engineeringC">
+      <div class="w3-content w3-light-grey">
+	<div class="w3-twothird w3-light-grey">
+	  <h1>Financial Technology</h1>
+      <h5 class="w3-padding-32 linkC"><a href="https://drive.google.com/file/d/12ME825MkfzUZthetGeLzVU_5BlCShV5K/view" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/1mMhAt8hs6_3Z72g61Pu2uVNq7GB293AeiP4Yv8L89So/edit#slide=id.g35f391192_00" target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">Financial Technology is the integration of technology into offerings by financial services companies in order to improve their use and delivery to consumers.</p>
+	</div>
+
+	<div class="w3-third w3-center w3-white">
+	  <a href="https://drive.google.com/file/d/12ME825MkfzUZthetGeLzVU_5BlCShV5K/view" target="_blank"><img class="cImage fa fa-anchor w3-padding-64 w3-text-red w3-white" src="Other_Images/engineeringC.png" alt="engineering"></img></a>
+	</div>
+      </div>
+    </div>
+    <!-- 4rd Grid -->
+    <div class="w3-row-padding w3-white w3-padding-64 w3-container" id="engineeringC">
+      <div class="w3-content w3-white">
+	<div class="w3-twothird w3-white">
+	  <h1>Mechatronics (Robotics) Engineering</h1>
+      <h5 class="w3-padding-32 linkC"><a href="https://docs.google.com/document/d/1sSk3nbE6NIRyEC9h2tmc9v870tdfQcppbXH48oQQX0I/edit" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/1mhd21_H-EE5qwd61ps-441DnaApjBLtSEfEStWi1gHc/edit#slide=id.g35f391192_00" target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">In the exciting field of mechatronics engineering (also known as robotics), individuals design systems that combine the concepts of mechanical and electrical engineering along with computer science to design and construct “robots” for a variety of applications. Used in factories, various industries, and even people’s homes, robots are becoming an increasingly integral part to our daily lives and the efficiency of businesses around the globe. With the invention of Atlas, Spot, and WildCat by the mechatronics engineers at Boston Dynamics, truly amazing systems have been created in this field and will continue to evolve in the future, making the field one that is currently in a state of rapid growth. Common responsibilities/ skills associated with this role include: Computer Aided Design (CAD), programming (particularly logical programming), electrical engineering/ circuit design, mechanical engineering, project management skills, and ultimately, creativity.  
+</p>
+	</div>
+
+	<div class="w3-third w3-center w3-white">
+	  <a href="https://docs.google.com/document/d/1sSk3nbE6NIRyEC9h2tmc9v870tdfQcppbXH48oQQX0I/edit" target="_blank"><img class="cImage fa fa-anchor w3-padding-64 w3-text-red w3-white" src="Other_Images/engineeringC.png" alt="engineering"></img></a>
+	</div>
+      </div>
+    </div>
+    <!-- 5th Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="techC">
+      <div class="w3-content w3-light-grey">
+	<div class="w3-third w3-center w3-light-grey">
+    <a href="https://drive.google.com/file/d/1hZCrFNvunKGe1YOU7XDre_P921HRc8gp/view" target="_blank"><img class="cImage fa fa-coffee w3-padding-64 w3-text-red w3-margin-right w3-light-grey" src="Other_Images/technology2C.png" alt="one pager image here"></img></a>
+	</div>
+
+	<div class="w3-twothird w3-white">
+	  <h1>Nanotechnology Engineer</h1>
+	    <h5 class="w3-padding-32 w3-white linkC"><a href="https://drive.google.com/file/d/1hZCrFNvunKGe1YOU7XDre_P921HRc8gp/view" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/1X8EvNA7DMWlxeaccWXi4wYtg8gZJs7C9JdtoCEMDOM8/edit#slide=id.g35f391192_00" target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">Nanotechnology engineering is the groundbreaking combination of chemistry, quantum physics, and subatomic manipulation, to either create products with favorable properties (through the changing of molecular structures), design systems that operate on a nanoscale, or a combination of both! With this knowledge, nanotechnology engineers develop nanobots for medical usage, reengineer materials to have ideal abilities, design quantum computers, and more. Well-known nanotechnology engineers include Sumio Iijima (for his discovery of carbon nanotubes) and K. Eric Drexler (for the conceptual basis of MNT), along with current business leaders being: Raytheon, Intel, Texas Instruments, and Bell Labs (Nokia). Common responsibilities/ skills for nanotechnology engineers include: having knowledge of molecule design softwares, containing an in-depth understanding of chemistry/ quantum physics, being detail-oriented, having determination, and constantly being investigative as new discoveries arise.</p>
+	</div>
+      </div>
+    </div>
+    <!-- 6th Grid -->
+    <div class="w3-row-padding w3-white w3-padding-64 w3-container" id="engineeringC">
+      <div class="w3-content w3-white">
+	<div class="w3-twothird w3-white">
+	  <h1>Radar Systems Analyst</h1>
+      <h5 class="w3-padding-32 linkC"><a href="https://drive.google.com/file/d/12LubSixc8gaKwpXgNd234MTbRkayl9pN/view" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/18oAMB3dG3nygKtUe5bOAnevSiNZMUh5sJFQG3n5Z95Q/edit#slide=id.g35f391192_00" target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">A Radar Systems Analysts job is to figure out how to improve radars so they can support the future testing needs. They do a lot of modeling in Matlab and make PowerPoints to tell the story of what needs to change, and to convince the consumers to fund the right project. They are the glue between the customers and the guys who actually turn wrenches on the hardware. They make sure both sides see the big picture of what they are trying to change, and why.</p>
+	</div>
+
+	<div class="w3-third w3-center w3-white">
+	  <a href="https://drive.google.com/file/d/12LubSixc8gaKwpXgNd234MTbRkayl9pN/view" target="_blank"><img class="cImage fa fa-anchor w3-padding-64 w3-text-red w3-white" src="Other_Images/engineeringC.png" alt="engineering"></img></a>
+	</div>
+      </div>
+    </div>
+    <!-- 7th Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="techC">
+      <div class="w3-content w3-light-grey">
+	<div class="w3-third w3-center w3-light-grey">
+    <a href="https://drive.google.com/file/d/1cuIfXLHN5oZ-s_hq9jnJoAGFqx0u9RZG/view" target="_blank"><img class="cImage fa fa-coffee w3-padding-64 w3-text-red w3-margin-right w3-light-grey" src="Other_Images/technology2C.png" alt="one pager image here"></img></a>
+	</div>
+
+	<div class="w3-twothird w3-white">
+	  <h1>Telecommunications Engineer</h1>
+	    <h5 class="w3-padding-32 w3-white linkC"><a href="https://drive.google.com/file/d/1cuIfXLHN5oZ-s_hq9jnJoAGFqx0u9RZG/view" target="_blank">One Pager</a><br><a href="https://docs.google.com/presentation/d/1HVSjzUhWQZ119qP3P6LcYCozZmtJSJeWck0vw0WKagE/edit#slide=id.p" target="_blank">Presentation</a></h5>
+
+	  <p class="w3-text-grey">Telecommunications Engineers design or put together wired, wireless, and satellite communications systems for various services such as voice and data. They also supervise installation, service, and maintenance.</p>
+	</div>
+      </div>
+    </div>
+    
+
+   <div class="w3-container w3-light-grey w3-center w3-opacity w3-padding-64">
+      <h1 class="w3-margin w3-xlarge w3-light-grey">Thank you for visiting!</h1>
+  </div>
+  
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey">
+      <p>By the <a href="https://www.allenisd.org/domain/5491" target="_blank" style="text-decoration:underline;">Allen ISD STEAM Ambassadors</a></p>
+    </footer>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  </body>
+
+    <script>
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function myFunction() {
+          var x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+              x.className += " w3-show";
+          } else {
+              x.className = x.className.replace(" w3-show", "");
+          }
+      }
+      //This is used for the button
+            //Get the button
+      var mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+          } else {
+              mybutton.style.display = "none";
+          }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+      /*This is where all of the scripting for the search bar takes place*/
+      var array = ["Cyber Security", "Neurologist", "Data Scientist", "Astronomer", "Technician"]; //these are example search results that the user can search for, this set of values should be set
+var maxResults = 5; //This is the maximum number of results that will pop up in the keyword search. Set to any valid number.
+var obj = {};
+var tempString = "";
+
+function hoverStyleP(pElement) {
+//This is used to change the color of search results background when hovered over
+  pElement.style.backgroundColor = "#b3b3b3"; //was #737373
+}
+function styleP(pElement) {//This is used to style each of the search results, change for better results
+  pElement.style.width = "160px";
+  pElement.style.height = "auto";
+  pElement.style.color = "black";
+  pElement.style.backgroundColor = "#d9d9d9";//used to be #595959
+  pElement.style.fontSize = "15px";
+  pElement.style.padding = "0.5vmin";
+  pElement.style.margin = "0vmin";
+  //pElement.style.textAlign = "center";
+}
+function styleA(aElement) {//This is used to style the anchor tags, change for better results
+  aElement.style.color="white";
+  aElement.style.textDecoration= "none";
+}
+function appendDiv(temp, txtOptDiv) {
+  var pElement = document.createElement("P"); //this creates a new <p> element
+  var aElement = document.createElement("A"); //this creates a new <a> element
+  var txt = document.createTextNode(temp); //this puts the search result into a text field
+  var link = `#${temp}`;
+  aElement.href=link;
+  styleA(aElement);
+  aElement.appendChild(pElement);
+  pElement.appendChild(txt); //this places the text inside of the new element
+  pElement.onmouseover=function() {hoverStyleP(pElement)};
+  pElement.onmouseout=function() {styleP(pElement)};
+  styleP(pElement);
+  txtOptDiv.appendChild(aElement); //this appends the new element to the content div
+}
+function clearDiv(txtOptDiv) {
+  while(txtOptDiv.firstChild) {
+    txtOptDiv.removeChild(txtOptDiv.firstChild);
+  }
+}
+function searchResults() {
+  obj = {};
+  var highestCount = -1;
+  var cont = true;
+  var cont2 = true;
+  var cont3 = true;
+  var txtIpt = document.getElementById("search").value;
+  var txtIptL = txtIpt.toLowerCase();
+  var txtOptDiv = document.getElementById("outputC");
+  clearDiv(txtOptDiv); //this is used to make sure that the search results are cleared after each use
+  for (var index=0; index<array.length; index++) {
+    temp = array[index];
+    tempL = array[index].toLowerCase()
+    if (tempL == txtIptL) { //eliminate all other results on a perfect match
+      cont2 = false;
+      appendDiv(temp, txtOptDiv);
+      break;
+    }
+  }
+  if (cont2) { //if a perfect match was not already found
+  for (var index=0; index<array.length; index++) { //this searches the entire list
+    cont=true;
+    var temp = array[index];
+    var tempL = temp.toLowerCase();
+    var count = 0;
+    for (var i=0; i<tempL.length; i++) { //this searches each character inside of string for each element of the array
+      for(var i2=0; i2<txtIptL.length; i2++) { //this searches each character inside of the input string separately
+        if (tempL[i] == txtIptL[i2]) {
+          cont=false;
+          count++;
+          break;
+        }
+      }
+      /*if (!cont) { //same thing as if cont == false
+        break;
+      }*/
+    }
+    if (count > highestCount) {
+      highestCount = count; //this updates the highest counted number (most accurate search result)
+    }
+    obj[temp] = count; //this updates the count for each item
+  }
+  var objectLength = Object.keys("obj").length; //this returns the object's length, not needed right now
+  //this is used to make sure that the search results appear in the highest order first
+  var resultCounter = 0;
+  for (var index=highestCount; index>0; index--) {
+    for (var index2=0; index2<array.length; index2++) {
+      var temp3 = array[index2];
+      var temp4 = obj[temp3];
+      if (resultCounter == maxResults) {
+        cont3=false;
+        break;
+      }
+      if (temp4 == index) {
+        //alert("Search result found!");
+        resultCounter++;
+        appendDiv(temp3, txtOptDiv); //this takes care of updating the search results
+      }
+    }
+    if (!cont3) { //same thing as cont3 == false
+      break;
+    }
+  }
+  }
+}
+
+    </script>
+</html>
