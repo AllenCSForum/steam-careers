@@ -754,6 +754,13 @@ function searchResults() {
     if (count > highestCount) {
       highestCount = count; //this updates the highest counted number (most accurate search result)
     }
+	  //this checks to see if the first word of the career is similar to the first part of the first word that the user types in the search
+	  var checkerIndx = tempL.indexOf(txtIptL);
+	  if (checkerIndx != -1) {
+	  	//success! in this case, it found the user input lowercase string to be part of the lowercase array results
+		highestCount+=40; //a really high value so that it takes priority
+		count = highestCount;
+	  }
     obj[temp] = count; //this updates the count for each item
   }
   var objectLength = Object.keys("obj").length; //this returns the object's length, not needed right now
