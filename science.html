@@ -669,7 +669,37 @@ function appendDiv(temp, txtOptDiv) {
   var pElement = document.createElement("P"); //this creates a new <p> element
   var aElement = document.createElement("A"); //this creates a new <a> element
   var txt = document.createTextNode(temp); //this puts the search result into a text field
-  var link = `#${temp}`;
+  var link = "";
+  for (int i=0; i<scienceArr.length; i++) {
+  	var tempValue17 = scienceArr[i];
+	if (tempValue17 == temp) {
+	    alert("Match found in the science array!");
+	    link += "/science";
+	}
+  }
+	for (int i=0; i<techArr.length; i++) {
+  	var tempValue18 = techArr[i];
+	if (tempValue18 == temp) {
+	    alert("Match found in the tech array!");
+	    link += "/technology";
+	}
+  }
+	  for (int i=0; i<engineerArr.length; i++) {
+  	var tempValue19 = scienceArr[i];
+	if (tempValue19 == temp) {
+	    alert("Match found in the engineering array!");
+	    link += "/engineering";
+	}
+  }
+	  for (int i=0; i<mathArr.length; i++) {
+  	var tempValue20 = scienceArr[i];
+	if (tempValue20 == temp) {
+	    alert("Match found in the math array!");
+	    link += "/math";
+	}
+  }
+  link += `#${temp}`;
+  alert("Current Link: " + link);
   aElement.href=link;
   styleA(aElement);
   aElement.appendChild(pElement);
@@ -699,7 +729,7 @@ function searchResults() {
     tempL = array[index].toLowerCase()
     if (tempL == txtIptL) { //eliminate all other results on a perfect match
       cont2 = false;
-      appendDiv(temp, txtOptDiv);
+      appendDiv(temp, txtOptDiv); //temp here is used to assign a link to the correct search result
       break;
     }
   }
