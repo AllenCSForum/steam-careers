@@ -1,1 +1,1 @@
-Website hosted at https://steamcareers.ml/
+Website hosted at https://steamcareers.cf/
